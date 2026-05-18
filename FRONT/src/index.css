@@ -1,0 +1,102 @@
+/* ============================================================
+   COMIDAPP — Design System
+   Inspirado en Rappi / Pedidos Ya
+   ============================================================ */
+
+:root {
+  /* — Paleta principal — */
+  --pink:        #c0607a;
+  --pink-dark:   #a04060;
+  --pink-light:  #d4849a;
+  --pink-subtle: #fdf0f3;
+  --pink-glow:   rgba(192, 96, 122, 0.14);
+
+  /* — Neutros — */
+  --bg:          #ffffff;
+  --bg-page:     #f8f9fb;
+  --surface:     #ffffff;
+  --border:      #e8ecf0;
+  --border-focus:#c0607a;
+
+  /* — Texto — */
+  --text:        #52525e;
+  --text-h:      #18181f;
+  --text-muted:  #8a8a9a;
+
+  /* — Estado — */
+  --success:     #10b981;
+  --error:       #e05252;
+
+  /* — Sombras — */
+  --shadow-sm:   0 1px 3px rgba(0,0,0,.07), 0 1px 2px rgba(0,0,0,.04);
+  --shadow-md:   0 4px 16px rgba(0,0,0,.08), 0 2px 6px rgba(0,0,0,.05);
+  --shadow-lg:   0 8px 36px rgba(0,0,0,.10), 0 3px 10px rgba(0,0,0,.06);
+  --shadow-pink: 0 4px 18px rgba(192, 96, 122, 0.22);
+
+  /* — Radio — */
+  --radius-sm:   8px;
+  --radius-md:   14px;
+  --radius-lg:   22px;
+  --radius-full: 9999px;
+
+  /* — Tipografía — */
+  --sans:    'Inter', 'Segoe UI', system-ui, sans-serif;
+  --heading: 'Poppins', 'Segoe UI', system-ui, sans-serif;
+
+  /* — Transición — */
+  --transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+  font-family: var(--sans);
+  font-size: clamp(14px, 1.5vw, 16px);
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg-page);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---- Reset base ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-page);
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(16px, 4vw, 40px) clamp(12px, 3vw, 24px);
+}
+
+h1, h2, h3 {
+  font-family: var(--heading);
+  font-weight: 700;
+  color: var(--text-h);
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+}
+
+p {
+  margin: 0;
+}
+
+/* ---- Scrollbar sutil ---- */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: var(--radius-full); }
